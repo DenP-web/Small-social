@@ -85,6 +85,7 @@ const MessagesController = {
       });
 
       const receiverSocketId = getReceiverSocketId(receiverId);
+      console.log(receiverSocketId)
       if (receiverSocketId) {
         io.to(receiverSocketId).emit("newMessage", newMessage);
       }
